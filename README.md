@@ -5,27 +5,28 @@ this is a small project that serve 1 HTML page, technologies that used: kubernet
 
 ## minikube
 
-1) clone the repo 
+1) ### clone the repo 
 ``` 
-git clone https://github.com/Benzeltzer/First-application-in-k8s
-cd /Desktop/project
+git clone https://github.com/Benzeltzer/first-k8s-app
+cd /Desktop/project Ktrust
 ```
 
-2) Build the image
+2) ### Build the image
 ```
 docker build -t mynginx ./
 ```
-3) setting minikube
+3) ### setting minikube
 using the tutorial : https://minikube.sigs.k8s.io/docs/start/.
 
 
-4) Start minikube
+4) ### Start minikube
 ```
 minikube start
 ```
-5) Push mynginx into minikube docker registry using this tutorial: https://minikube.sigs.k8s.io/docs/handbook/registry/
+5) ### Push mynginx into minikube docker registry using this tutorial:
+ https://minikube.sigs.k8s.io/docs/handbook/registry/
 
-6) create terraform configuration
+6) ### create terraform configuration
 ``` 
 provider "kubernetes" {
   config_path = "~/.kube/config"  # Adjust the path to your kubeconfig file
@@ -87,12 +88,12 @@ resource "kubernetes_service" "nginx" {
   }
 }
 ```
-7) run terraform 
+7) ### run terraform 
 ```
 terraform init
 terraform apply
 ```
-8) Find HTTP and HTTPS IP adresses
+8) ### Find HTTP and HTTPS IP adresses
 
 ```
 minikube service list
@@ -112,7 +113,7 @@ you should see :
 ```
 for this example you can open your browser and check the following address:
 
-HTTP : 
+### HTTP : 
 
 http://192.168.49.2:30001/
 
