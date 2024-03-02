@@ -1,5 +1,5 @@
 
-# my first k8s application for Ktrust
+# my first k8s application.
 
 this is a small project that serve 1 HTML page, technologies that used: kubernetes, minikube, Docker, terraform.
 
